@@ -1,0 +1,38 @@
+body.dark-mode{
+background-color: #111;
+}
+
+body.dark-mode #page_body .FeaturedPost, body.dark-mode .Blog .blog-posts .post-outer-container {
+background: #222;
+}
+
+class='dark-mode'
+
+
+body.dark-mode .post-title, body.dark-mode  .post-title a, body.dark-mode .post-title a:hover, body.dark-mode .post-title a:visited {
+color: #eee;
+}
+
+body.dark-mode .main .PopularPosts{
+background: #000;
+}
+
+body.dark-mode a.timestamp-link, body.dark-mode a:active.timestamp-link, body.dark-mode a:visited.timestamp-link {
+color: #eee;
+}
+
+body.dark-mode .post-body {
+color: #eee;
+}
+
+body.dark-mode .post-snippet .snippet-fade {
+background: linear-gradient(to left,#222 0,#222 20%,rgba(255, 255, 255, 0) 100%);
+}
+
+body.dark-mode .PopularPosts .item-content {
+color: #eee;
+}
+
+body.dark-mode .main .popular-posts-snippet .snippet-fade {
+background: linear-gradient(to left,#000 0,#000 20%,rgba(238, 238, 238, 0) 100%);
+}
