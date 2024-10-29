@@ -1,0 +1,120 @@
+      <!-- Start --> 
+    
+<div id='loader'>
+    <div class='wrap'>
+        <div class='bg'>
+            <div class='loading'>
+                <span class='title'>hackeando...</span>
+                <span class='text'>...ciberfy.es</span>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'/>
+<script type='text/javascript'>
+    $(window).on(&#39;load&#39;, function () {
+        setTimeout(function () {
+            $(&quot;.wrap&quot;).fadeOut(&quot;slow&quot;);
+            setTimeout(function () {
+                $(&quot;#loader&quot;).fadeOut(&quot;slow&quot;);
+            }, 1000);
+        }, 5000); // Tiempo total antes de ocultar el loader
+    });
+</script>
+
+<style>
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    color: #eaf7ff;
+    z-index: 1000;
+    font-family: sans-serif, arial;
+}
+
+.wrap {
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Centra el contenedor */
+    transform: translate(-50%, -50%); /* Ajuste para centrar correctamente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 600px; /* Limitar el ancho en pantallas más grandes */
+    padding: 0 20px; /* Espaciado lateral para móviles */
+}
+
+.bg {
+    padding: 30px 30px 30px 0;
+    background: #306f99;
+    animation: bg 1.5s linear infinite;
+    box-shadow: inset 0 0 45px 30px black;
+    width: 100%; /* Asegurarse de que el fondo ocupe el ancho completo */
+}
+
+.loading {
+    position: relative;
+    text-align: left; /* Alinear el texto a la izquierda */
+    text-shadow: 0 0 6px #bce4ff;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s; /* Retraso antes de que aparezca &quot;loading...&quot; */
+}
+
+.loading span {
+    display: block;
+    text-transform: uppercase;
+    height: 20px;
+    line-height: 30px; /* Espacio entre líneas ajustado */
+    position: relative; /* Para posicionar el selector */
+}
+
+.loading span.title {
+    margin-right: 30px; /* Espacio a la derecha del texto */
+}
+
+.loading span:after {
+    content: &quot;&quot;;
+    display: inline-block; /* Cambiar a inline-block para que se coloque al lado del texto */
+    height: 20px;
+    width: 16px;
+    background: #eaf7ff;
+    box-shadow: 0 0 15px #bce4ff;
+    animation: blink 1s infinite; /* Efecto intermitente para el selector */
+}
+
+.loading span.text {
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeInText 1s forwards; /* Animación para aparecer el texto del sitio */
+    animation-delay: 4s; /* Aparece después de 4 segundos */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade in para hacer visible el contenedor */
+    }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; } /* Hacer visible el texto del blog */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes bg {
+    0% { background-color: #306f99; }
+    50% { background-color: #19470f; }
+    90% { background-color: #734a10; }
+}
+</style>
+
+    
+ <!-- End --> 
